@@ -826,7 +826,7 @@ bool Conn::StringToAddress(const char *szAddress, unsigned long *lAddress, bool 
       else
       {
          debug("Conn::StringToAddress from hostent data\n");
-         memcpy(lAddress, pHost->h_addr, sizeof(lAddress));
+         memcpy(lAddress, pHost->h_addr, sizeof(lAddress) * sizeof(unsigned long));
       }
    }
    else
