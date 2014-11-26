@@ -9,7 +9,7 @@
 SSLINC=/usr/local/ssl/include
 SSLLIB=/usr/local/ssl/lib
 
-CC=g++
+CC?=g++
 CCSECURE=-DCONNSECURE -I$(SSLINC)
 INCCCFLAGS=-g -Wall -O2 -DUNIX -DLinux -DSTACKTRACEON -I..
 CCFLAGS=$(INCCCFLAGS) $(CCSECURE)
